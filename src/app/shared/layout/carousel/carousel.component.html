@@ -1,0 +1,21 @@
+<div class="carousel c-accent">
+
+  <div class="content">
+    <article class="item cursor-pointer"
+             [ngClass]="{'visible': currentIndex===i}">
+      <div class="img" [ngStyle]="{'background-image': 'url(' + model.url + ')'}">
+        <div class="click-area left" (click)="prev()">
+          <i class="material-icons">keyboard_arrow_left</i>
+        </div>
+        <div class="click-area right" (click)="next()">
+          <i class="material-icons">keyboard_arrow_right</i>
+        </div>
+        <div class="progress">
+          <div *ngFor="let avatar of avatars;let i=index" class="progress-dots">
+            <span class="dot" [ngClass]="{'active':currentIndex===i}" (click)="selectImage(i)"></span>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</div>

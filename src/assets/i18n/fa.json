@@ -1,0 +1,35 @@
+{
+  "ufarm": {
+    "brand": "UFarm",
+    "welcome": "خوش آمدید",
+    "signOut": "خروج",
+    "global": {
+      "username": "نام کاربری",
+      "password": "رمز عبور",
+      "save": "ذخیره",
+      "edit": "ویرایش"
+    },
+    "login": {
+      "title": "ورود به سامانه",
+      "button": "ورود",
+      "rememberMe": "مرا به خاطر بسپار"
+    },
+    "validation": {
+      "required": "پر کردن این فیلد الزامیست",
+      "OBJECT_MISSING_REQUIRED_PROPERTY": "پر کردن این فیلد الزامیست"
+    },
+    "register": {
+      "title": "ثبت نام",
+      "schema": {
+        "username": "نام کاربری",
+        "password": "رمز عبور"
+      }
+    },
+    "header": {
+      "searchInputPlaceholder": "نام کالا، برند یا دسته مورد نظر خود را جستجو کنید...",
+      "schema": {
+        "title": "عنوان"
+      }
+    }
+  }
+}

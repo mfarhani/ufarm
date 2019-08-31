@@ -1,0 +1,360 @@
+@import "variables";
+
+.sf-form-header {
+  display: block;
+  border-bottom: 1px solid rgba(0, 0, 0, .42);
+  //align-items: center;
+
+  h1 {
+    width: 100%;
+    margin: 5px 20px;
+  }
+
+  .mat-flat-button {
+    min-width: unset;
+    //height: 30px;
+    line-height: 30px;
+  }
+
+  .page-action-bar {
+    display: flex;
+    padding: 0.2rem 1rem;
+
+    .page-title-bar {
+      h1 {
+        font-size: 1.2rem !important;
+        margin-left: 0;
+      }
+    }
+
+    .page-action-btn {
+      display: flex;
+      width: 100%;
+      text-align: end;
+      position: relative;
+      float: right;
+
+      button {
+        font-size: 0.75rem !important;
+      }
+    }
+  }
+
+  .page-bread-crumb {
+    display: inline-flex;
+    width: 50%;
+    height: 30px;
+  }
+
+
+  .page-title-bar {
+    display: flex;
+    font-family: $baseFontFamily;
+  }
+}
+
+gl-text-area-widget {
+  textarea {
+    min-height: 52px;
+  }
+}
+
+fieldset {
+  border: none;
+
+  legend {
+    margin: 0;
+    font-size: x-large;
+    padding: 0 0 $baseGap/2;
+    border-bottom: 1px solid $borderColor;
+    width: 100%;
+    margin-bottom: $baseGap;
+  }
+
+  div {
+    sf-form-element {
+      font-size: 0.9rem !important;
+
+      // display: flex;
+      // background: $bgWidgetColor;
+      // padding: 0 $baseGap;
+      // min-height: 35px;
+      .gl-unit-select-widget,
+      gl-tree-select-widget,
+      gl-string-widget,
+      gl-text-area-widget,
+      gl-date-widget,
+      gl-select-widget,
+      gl-password-widget,
+      gl-installation-type-index-widget,
+      gl-popup-select-widget,
+      gl-popup-multi-select-widget {
+        display: flex;
+        background: $bgWidgetColor;
+        padding: 0 $baseGap;
+        padding-bottom: $baseGap/2;
+        min-height: 35px;
+
+        > label {
+          width: 20%;
+          min-width: 130px;
+          max-width: 190px;
+          text-align: inherit;
+          padding: $baseGap 0 $baseGap $baseGap*3;
+          color: $muteColor;
+
+          + .ng-star-inserted {
+            padding: $baseGap 0 $baseGap $baseGap*3;
+          }
+        }
+
+        mat-form-field {
+          display: block !important;
+          width: 100%;
+          max-width: 480px;
+        }
+
+        .help {
+          width: 24px;
+          height: 15px;
+          font-weight: 100;
+          line-height: 17px;
+          border-radius: 50%;
+          text-align: center;
+          font-size: 14px;
+          border: 1px solid;
+          color: #459fc3;
+          align-self: center;
+        }
+      }
+
+      sf-widget-chooser {
+        label {
+          display: inline-block; // min-width: 200px; // width: 30%;
+
+          //text-align: left;
+          //color: $muteColor;
+          //padding: 0 $baseGap;
+          //
+          //&::after {
+          //  content: '=';
+          //}
+
+          // &.required::after {
+          //     content: "*";
+          //     color: red;
+          // }
+        }
+
+        gl-date-widget,
+        gl-machine-temporary-disconnect-widget {
+
+
+          .help {
+            width: 15px;
+          }
+        }
+
+        gl-machine-temporary-disconnect-widget {
+          padding: 0px;
+          //   background-color: transparent;
+
+          margin: 20px 0px;
+
+          .mat-accordion {
+            width: 100%;
+
+            .mat-expansion-panel-header {
+              font-family: $baseFontFamily;
+
+            }
+
+            .mat-expansion-panel-body {
+              padding: 0 0px 16px;
+
+              font-family: $baseFontFamily;
+              overflow: auto;
+
+              .temporary-disconnect-box {
+                display: flex;
+                background: #fff;
+                padding: 0 1rem;
+                min-height: 35px;
+
+                .mat-form-field {
+                  padding: 1rem 0 1rem 3rem;
+                }
+
+                .temporary-disconnect-label {
+                  width: 20%;
+                  min-width: 130px;
+                  max-width: 190px;
+                  text-align: end;
+                  padding: 1rem 0 1rem 3rem;
+                  color: #6c757d;
+                  display: inline-flex;
+                  align-items: center;
+                  justify-content: flex-end;
+                }
+
+                .interval-label {
+                  align-items: center;
+                  display: inline-flex;
+                }
+              }
+
+              .temporary-disconnect-action {
+                text-align: left;
+                padding: 0px 20px;
+              }
+            }
+
+          }
+        }
+
+        gl-status-multi-select-widget {
+          .mat-card {
+            .mat-card-header {
+              .mat-card-header-text {
+                display: flex;
+                width: 100%;
+                margin: 0;
+                padding: 0px 16px 0px 0px;
+
+                .mat-card-title {
+
+                  &:nth-child(1) {
+                    width: 100%;
+                  }
+
+                  &:nth-child(2) {
+                    margin-right: 20px;
+                    font-size: 12px;
+                    margin-bottom: 0px;
+                    display: inline-flex;
+                    align-items: center;
+                  }
+
+                  &:nth-child(3) {
+                    margin-right: 5px;
+                    font-size: 12px;
+                    margin-bottom: 0px;
+                    display: inline-flex;
+                    align-items: center;
+                  }
+
+                }
+              }
+            }
+          }
+
+          .mat-checkbox {
+            &.status-tag-list.mat-checkbox-label-before {
+              label {
+                display: flex;
+
+                &::after {
+                  content: '';
+                }
+
+                .mat-checkbox-label {
+                  width: 100%;
+                }
+              }
+
+              .mat-checkbox-inner-container {
+                margin-right: 20px;
+                margin-bottom: 6px;
+              }
+            }
+          }
+
+          .remove {
+            margin-right: 10px;
+            font-size: 20px;
+            margin-bottom: 4px;
+            cursor: pointer;
+          }
+
+          .mat-list-item {
+            .mat-card-title {
+              font-size: 16px;
+              margin-right: 20px;
+
+              &.title {
+                width: 100%;
+                margin-right: 0px;
+              }
+
+              // width: 100%;
+
+            }
+          }
+        }
+      }
+
+      .has-error {
+        sf-widget-chooser {
+          .mat-form-field {
+
+            &.ng-touched,
+            &.ng-dirty {
+              .mat-form-field-underline {
+                background-color: #f44336;
+              }
+
+              .mat-hint {
+                color: #f44336;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // &:nth-child(2) {
+    //     sf-form-element {
+    //         justify-content: flex-end;
+    //         padding-top: $baseGap;
+
+    //         button {
+    //             margin-right: $baseGap/2;
+    //         }
+    //     }
+    // }
+
+  }
+
+
+}
+
+.tree-sf-from-action {
+  direction: rtl;
+}
+
+.button-spinner {
+  display: inline !important;
+  margin-left: 0.5rem;
+}
+
+gl-checkbox-widget {
+  font-size: 0.8rem !important;
+
+  mat-checkbox {
+    margin-left: 1rem;
+  }
+
+  > label {
+    width: 20%;
+    min-width: 130px;
+    max-width: 190px;
+    text-align: inherit;
+    padding: $baseGap 0 $baseGap $baseGap*3;
+    color: $muteColor;
+    margin-left: 1rem;
+
+    + .ng-star-inserted {
+      padding: $baseGap 0 $baseGap $baseGap*3;
+    }
+  }
+}

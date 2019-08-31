@@ -1,0 +1,23 @@
+.container {
+  padding: 15px;
+  width: -webkit-fill-available;
+  min-height: 500px;
+  background-color: #F4F4F4;
+
+  .banner {
+    img {
+      height: 68.8px;
+      width: 100%;
+      border-radius: 0.4rem;
+    }
+
+    .box-1 {
+      display: inline-flex;
+
+      .adv {
+      }
+    }
+
+    margin-bottom: 15px;
+  }
+}

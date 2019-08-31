@@ -1,0 +1,293 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'variables.scss';
+@import 'sf-form.scss';
+/** ANGULAR MATERIAL **/
+
+.mat-dialog-actions {
+  button:not(:last-child) {
+    margin-left: $baseGap/2;
+  }
+}
+
+.mat-card,
+.mat-list-item {
+  //font-family: inherit !important;
+}
+
+//
+//.mat-menu-content {
+//  .mat-menu-item {
+//    fa {
+//      margin-left: 5px;
+//    }
+//  }
+//}
+
+.mat-table {
+  .cdk-column-actionOnRow {
+    text-align: end !important;
+
+    button {
+      min-width: initial;
+    }
+  }
+}
+
+.mat-tree {
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+}
+
+/* * COMMON * */
+
+input {
+  line-height: $resetLineHeight;
+
+  &[type=password] {
+    font-family: $baseFontFamily, Verdana, Geneva, Tahoma, sans-serif;
+  }
+}
+
+button {
+  //font-family: inherit !important;
+
+  fa + span {
+    margin-right: 4px;
+  }
+}
+
+.hidden {
+  display: none !important;
+}
+
+.alert {
+  padding: 1rem;
+  border-radius: .5rem;
+  border: 1px solid;
+  margin-bottom: $baseGap;
+
+  &.alert-danger {
+    background: $bgDangerColor;
+    border-color: $textDangerColor;
+    color: $textDangerColor;
+  }
+}
+
+.dropdown {
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    margin-right: 4px;
+    vertical-align: 0.255em;
+    border-top: 5px solid;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+  }
+}
+
+.touchspin {
+  position: relative;
+  width: 25px;
+  height: 28px;
+
+  button {
+    position: relative;
+    height: 50%;
+    min-width: auto;
+    width: 100%;
+    border: none;
+    background: transparent;
+    line-height: 1;
+    text-align: center;
+    left: 0;
+    right: 0;
+    color: $muteColor;
+    cursor: pointer;
+    outline: none;
+
+    &:hover {
+      color: $textColor;
+    }
+
+    &:active {
+      background: $bgDarkenColor;
+    }
+
+    &.touchspin-increase {
+      top: 0;
+    }
+
+    &.touchspin-decrease {
+      bottom: 0;
+    }
+  }
+}
+
+.buttons {
+
+  button,
+  a {
+    &:not(:last-child) {
+      margin-left: $baseGap/2;
+    }
+  }
+
+  &.buttons-end {
+    text-align: end;
+
+    button,
+    a {
+      &:not(:last-child) {
+        margin-left: 0;
+        margin-right: $baseGap/2;
+      }
+    }
+  }
+}
+
+/* * LAYOUT * */
+
+html,
+body {
+  height: 100%;
+}
+
+.mat-table,
+.mat-form-field,
+.mat-tree {
+  //font-family: inherit;
+}
+
+//body {
+//  direction: rtl;
+//  background-color: $bgColor;
+//  margin: 0;
+//  font-family: $baseFontFamily; // padding-top: 100px;
+//  font-size: 14px;
+//
+//}
+
+
+.page-actions {
+  margin-bottom: $baseGap;
+}
+
+.search-box {
+  .mat-form-field-appearance-outline .mat-form-field-infix {
+    padding: 0;
+  }
+
+  .search-button {
+    min-width: initial;
+    margin-left: .5rem
+  }
+}
+
+
+.gl-card {
+  margin: 0 1rem;
+  font-family: $baseFontFamily;
+
+  h2 {
+    display: inline-block;
+  }
+
+  .content-header {
+    display: flex;
+    border-bottom: 1px solid $borderColor;
+    padding: 0;
+    margin-bottom: 2px;
+
+    .content-wrapper {
+      display: flex !important;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .buttons-header {
+      display: flex;
+      width: 100% !important;
+      justify-content: flex-end;
+
+      button {
+        line-height: 1.9rem;
+        margin: 0.2rem;
+        //margin-right: 8px;
+        font-size: 0.75rem;
+      }
+    }
+
+    .title-header {
+      width: inherit;
+      margin: 0;
+      font-size: 1.2rem;
+    }
+  }
+
+
+  .table-alert {
+    text-align: center;
+    margin-top: 20px;
+    display: block;
+    color: rgba(0, 0, 0, 0.54);
+  }
+
+  app-filter {
+    width: 100%;
+    border: 1px solid $input-border-color;
+    margin-top: 30px;
+    padding: 0px 0px 15px;
+    display: flow-root;
+  }
+
+  .mat-table {
+    width: 100%;
+  }
+
+  .mat-table {
+
+    tr.mat-header-row {
+      background-color: $headerBgColor;
+      //height: 12px;
+      line-height: 10px;
+
+      h2 {
+        font-size: 0.75rem !important;
+        color: white;
+      }
+    }
+
+    td, th {
+      text-align: center;
+    }
+
+    td {
+      font-size: 0.75rem;
+    }
+
+    tr {
+      height: 12px !important;
+
+      button {
+        line-height: 25px;
+      }
+
+      &.pointer {
+        cursor: pointer;
+      }
+
+      &.selected {
+        background-color: #72a2cc;
+        color: white;
+        border: 1px solid #72a2cc;
+
+        .mat-cell {
+          color: white;
+        }
+      }
+    }
+  }
+
+}
